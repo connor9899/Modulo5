@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.M5_EjercicioIndividual2" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <style name="Theme.MyApplication" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <style name="Theme.M_5EjercicioIndividual3" parent="android:Theme.Material.Light.NoActionBar" />
+</resources>
