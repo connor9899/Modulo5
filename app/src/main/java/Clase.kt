@@ -46,11 +46,20 @@ class Usuario(
          }
          println()
      }
+
+     fun filtrarPorEdadMayor(edad: Int): List<Usuario> {
+         return usuarios.filter { it.edad > edad }
+     }
+
+     fun mostrarUsuariosFiltrados(edad: Int) {
+         val usuariosFiltrados = filtrarPorEdadMayor(edad)
+         println("Usuarios mayores de $edad años:")
+         usuariosFiltrados.forEach { usuario ->
+             println("${usuario.nombre}: ${usuario.edad} años")
+         }
+         println()
+     }
  }
-
-
-
-
 
 fun main() {
 
@@ -64,15 +73,10 @@ fun main() {
     gestor.agregarUsuario(usuario2)
     gestor.agregarUsuario(usuario3)
 
-    println("Lista inicial de usuarios:")
+    println("Lista completa de usuarios:")
     gestor.mostrarLista()
 
-
-    gestor.eliminarUsuario("María")
-
-
-    println("Lista actualizada de usuarios:")
-    gestor.mostrarLista()
+    gestor.mostrarUsuariosFiltrados(30)
 
 }
 
